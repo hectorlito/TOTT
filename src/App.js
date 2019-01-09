@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <div>
-          <img className="logo" src={TTlogo} />
+          <img className="logo" src={TTlogo} alt="logo" />
         </div>
         <Navbar />
       </div>
