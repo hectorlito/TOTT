@@ -19,7 +19,6 @@ class FootballM extends React.Component {
   render() {
     return (
       <div>
-        <h1>hi</h1>
         {this.state.fm.map(item => (
           <div key={item.id}>
             <h1>{item.challenge}</h1>
