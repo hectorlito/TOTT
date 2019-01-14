@@ -7,7 +7,7 @@ class Blog extends React.Component {
 
   async componentDidMount() {
     try {
-      const res = await fetch("http://127.0.0.1:8000/api/");
+      const res = await fetch("https://top-back.herokuapp.com/api/blog");
       const blog = await res.json();
       this.setState({
         blog
