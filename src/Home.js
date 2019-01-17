@@ -36,27 +36,33 @@ class Home extends React.Component {
   render() {
     const { error, isLoaded, articles } = this.state;
     if (error) {
-      return <div>Error</div>;
+      return <div> Error </div>;
     } else if (!isLoaded) {
-      return <div>Loading...</div>;
+      return <div> Loading... </div>;
     } else {
       return (
         <div>
-          <ul>
+          <h2 className="leaguename">Premier League</h2>
+          <hr className="style-two" />
+          <div className="container">
             {articles.map(articles => (
-              <li key={articles.title}>
-                <div className="link">
-                  <a href={articles.url}>
-                    <img src={articles.urlToImage} alt="images" />
-                  </a>
-                </div>
-                <div>
-                  <a href={articles.url}>{articles.title}</a>
-                </div>
-                <p>{articles.description}</p>
-              </li>
+              <ul>
+                <li className="items" key={articles.title}>
+                  <div className="link">
+                    <a href={articles.url}>
+                      <img
+                        className="storyphoto"
+                        src={articles.urlToImage}
+                        alt="images"
+                      />
+                    </a>
+                    <a href={articles.url}> {articles.title} </a>
+                    <p> {articles.description} </p>
+                  </div>
+                </li>
+              </ul>
             ))}
-          </ul>
+          </div>
         </div>
       );
     }

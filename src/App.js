@@ -2,15 +2,24 @@ import React, { Component } from "react";
 import "./App.css";
 import Navbar from "./navbar.js";
 import TTlogo from "./TTlogo.jpg";
+import Home from "./Home.js";
+
+import { Route, Link } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <div>
-          <img className="logo" src={TTlogo} alt="logo" />
+          <Link to="/">
+            <img className="logo" src={TTlogo} alt="logo" />
+          </Link>
+
+          <Navbar className="nav" />
         </div>
-        <Navbar />
+        <main>
+          <Route exact path="/" />
+        </main>
       </div>
     );
   }
