@@ -4,7 +4,7 @@ class AboutUs extends React.Component {
   render() {
     return (
       <div>
-        <h1> Hector Guevara </h1>
+        <h1> Hector ali Guevara </h1>
         <h4>Creative Director/Founder</h4>
         <p>
           Huge football fanatic, created this site as a way of getting all my
